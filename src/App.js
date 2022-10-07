@@ -13,10 +13,27 @@ function App() {
     // Creating a winner state which will determine the winner of the game
     const [winner, setWinner] = useState('');
 
-
+    // Creating a function to clear the board and begin the reset process
+    const resetBoard = () => {
+        setReset(true);
+    };
 
     return(
-        <></>
+        <div className='app'>
+            {/* Hiding the popup if there's no winner */}
+            <div className={`winner ${winner !== '' ? '' : 'hide'}`}>
+                {/* Displaying the current winner */}
+                <div className='congratulations'>(winner)</div>
+                {/* Button to reset the game whenever the User wants to */}
+                <button onClick={() => resetBoard()}>
+                    Reset Game
+                </button>
+            </div>
+
+            {/* Board Game and Tic-Tac-Toe Information components */}
+            <Board reset={reset}  setReset={setReset} winner={winner} setWinner={setWinner}/>
+            <Info />
+        </div>
     );
 }
 
