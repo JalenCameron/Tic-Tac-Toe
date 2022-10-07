@@ -1,0 +1,18 @@
+.info {
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #284E75;
+}
+
+.player {
+    border: 2px solid #284E75;
+    border-radius: 5%;
+    padding: .5rem 0;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+}

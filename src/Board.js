@@ -95,7 +95,7 @@ const Board = ({ reset, setReset, winner, setWinner }) => {
     const checkTie = () => {
         let count = 0;
         data.forEach((cell) => {
-            if (cell != '') {
+            if (cell !== '') {
                 count++;
             }
         })
@@ -104,7 +104,7 @@ const Board = ({ reset, setReset, winner, setWinner }) => {
 
     // Setting the winner if there's a win
     if (checkWin()) {
-        setWinner(turn === 0 ? "Player 2 Wins!" : "Player 1 Wins");
+        setWinner(turn === 0 ? "Player 2 Wins!" : "Player 1 Wins!");
     } else if (checkTie()) {
         setWinner("It's a Tie!");
     };

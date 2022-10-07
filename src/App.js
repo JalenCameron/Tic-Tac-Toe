@@ -23,7 +23,7 @@ function App() {
             {/* Hiding the popup if there's no winner */}
             <div className={`winner ${winner !== '' ? '' : 'hide'}`}>
                 {/* Displaying the current winner */}
-                <div className='congratulations'>(winner)</div>
+                <div className='congratulations'>{winner}</div>
                 {/* Button to reset the game whenever the User wants to */}
                 <button onClick={() => resetBoard()}>
                     Reset Game
